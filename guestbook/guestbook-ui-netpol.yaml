@@ -4,7 +4,7 @@ metadata:
   name: allow-only-8002
 spec:
   podSelector:
-    matchLanels:
+    matchLabels:
       app:  guestbook-ui
   policyTypes:
   - Ingress
