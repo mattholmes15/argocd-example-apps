@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-only-8002
+spec:
+  podSelector:
+    matchLanels:
+      app:  guestbook-ui
+  policyTypes:
+  - Ingress
+  ingress:
+  - ports:
+    - port: 8002
+
